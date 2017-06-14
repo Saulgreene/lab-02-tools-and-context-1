@@ -1,19 +1,32 @@
 'use strict';
 
 
+
 const fp = module.exports = {};
 
-fp.map = (list, callback) => Array.prototype.map.call(list, callback);
+fp.map = (list, callback) => {
+  return (list !== null)? Array.prototype.map.call(list, callback): null;
+};
 
-fp.filter = (list, callback) => Array.prototype.filter.call(list, callback);
+fp.filter = (list, callback) => {
+  return(list !== null)? Array.prototype.filter.call(list, callback): null;
+};
 
-fp.reduce = (list, callback) => Array.prototype.reduce.apply(list, callback);
+fp.reduce = (list, callback) => {
+  return(list !== null)? Array.prototype.reduce.apply(list, callback): null;
+};
 
-fp.concat = (arr1, arr2) => Array.prototype.concat.call(arr1, arr2);
+fp.concat = (arr1, arr2) => {
+  return( arr1 !== null)? Array.prototype.concat.call(arr1, arr2): null;
+};
 
 fp.splice = (list, ...args) => {
-  Array.prototype.splice.apply(list, args);
-  return list;
+  if(list !== null){
+    Array.prototype.splice.apply(list, args);
+    return list;
+  } else{
+    return null;
+  }
 };
 
 

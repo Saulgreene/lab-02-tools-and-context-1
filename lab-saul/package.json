@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "lint": ".eslintrc",
+    "lint": "eslint lib/ test/",
     "test": "mocha"
   },
   "author": "Saul Greene",

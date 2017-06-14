@@ -1,6 +1,11 @@
 'use strict';
 
 const fp = require('./lib/fp.js');
-// 
-//
-// * make a CLI `index.js` that will use your new `map` function to UpperCase all command line args and print them to the screen
+
+const main = module.exports = () => {
+  let result = process.argv;
+  result = fp.map(result, something => something.toUpperCase());
+  console.log(result);
+};
+
+main();
