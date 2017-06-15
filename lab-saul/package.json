@@ -1,0 +1,19 @@
+{
+  "name": "lab-saul",
+  "version": "1.0.0",
+  "description": "![cf](https://i.imgur.com/7v5ASc8.png) lab-02-tools-and-context ======",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint lib/ test/",
+    "test": "mocha"
+  },
+  "author": "Saul Greene",
+  "license": "ISC",
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.4.2"
+  }
+}
